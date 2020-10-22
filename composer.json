@@ -1,0 +1,23 @@
+{
+    "name": "jm-inc/mega-php",
+    "description": "Interact with the Mega command-line tool using PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jewishmoses",
+            "email": "work@xmoses.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require": {
+        "symfony/process": "^5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    }
+}
