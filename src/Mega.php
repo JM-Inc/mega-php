@@ -7,6 +7,8 @@ use Exception;
 
 class Mega
 {
+    public $url;
+
     private function exec(array $command, $timeout = 60)
     {
         return (new Process($command))
@@ -20,6 +22,7 @@ class Mega
             throw new Exception("Invalid URL provided, please provide a valid Mega URL.");
         }
 
+        $this->url = $url;
         $this->logout();
         $this->exec([
             'mega-login',
@@ -34,6 +37,8 @@ class Mega
         $this->exec([
             'mega-logout'
         ]);
+
+        $this->url = null;
     }
 
     public function download($remote_path, $local_path, $timeout = 3600)

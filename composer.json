@@ -10,9 +10,9 @@
         }
     ],
     "autoload": {
-        "classmap": [
-            "src/"
-        ]
+        "psr-4": {
+            "JM\\Mega\\": "src/"
+        }
     },
     "require": {
         "symfony/process": "^5.1"
