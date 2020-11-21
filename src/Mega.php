@@ -22,12 +22,12 @@ class Mega
             throw new Exception("Invalid URL provided, please provide a valid Mega URL.");
         }
 
-        $this->url = $url;
         $this->logout();
         $this->exec([
             'mega-login',
             $url
         ]);
+        $this->url = $url;
 
         return $this;
     }
